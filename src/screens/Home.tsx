@@ -1,11 +1,19 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Button } from 'react-native';
 // import { RouteName } from '../constants/enumConstants';
 
-export function HomeScreen() {
+interface HomeScreen {
+  navigation: any;
+}
+
+export function HomeScreen({ navigation }: HomeScreen) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home Screen</Text>
+      <Button
+        title="Go to the Detail screen"
+        onPress={() => navigation.navigate('Details')}
+      />
     </View>
   );
 }
@@ -24,7 +32,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: '#20232a',
     borderRadius: 6,
-    backgroundColor: '#61dafb',
+    backgroundColor: '#DD5E98',
     color: '#20232a',
     textAlign: 'center',
     fontSize: 30,

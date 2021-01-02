@@ -1,11 +1,25 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Button } from 'react-native';
 // import { RouteName } from '../constants/enumConstants';
 
-export function DetailScreen() {
+interface DetailScreen {
+  navigation: any;
+}
+
+export function DetailScreen({ navigation }: DetailScreen) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Detail Screen</Text>
+      <Button
+        title="Go to the Detail screen... Again!"
+        onPress={() => navigation.push('Details')}
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack('Details')} />
+      <Button
+        title="Go back to first screen in stack"
+        onPress={() => navigation.popToTop('Details')}
+      />
     </View>
   );
 }
@@ -24,8 +38,8 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: '#20232a',
     borderRadius: 6,
-    backgroundColor: '#61dafb',
-    color: '#20232a',
+    backgroundColor: '#DD5E98',
+    color: '#fff',
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
