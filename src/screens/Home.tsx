@@ -6,10 +6,13 @@ interface HomeScreen {
   navigation: any;
 }
 
+const Separator = () => <View style={styles.separator} />;
+
 export function HomeScreen({ navigation }: HomeScreen) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home Screen</Text>
+      <Separator />
       <Button
         title="Go to the Detail screen"
         onPress={() => navigation.navigate('Details')}
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#eaeaea',
   },
   title: {
-    marginTop: 16,
+    marginTop: 100,
     paddingVertical: 8,
     borderWidth: 4,
     borderColor: '#20232a',
@@ -37,5 +40,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
 });
