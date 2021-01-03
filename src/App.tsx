@@ -26,6 +26,37 @@ const DetailStack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 //Home Screen
+const HomeStackScreen = ({ navigation }: HomeScreen) => (
+  <HomeStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#DD5E98',
+      },
+      headerTintColor: '#20232a',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+    <HomeStack.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{
+        title: 'Welcome to My First App',
+        headerLeft: () => (
+          <Icons.Button
+            color="#20232a"
+            name="ios-menu"
+            size={30}
+            backgroundColor="#DD5E98"
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          />
+        ),
+      }}
+    />
+  </HomeStack.Navigator>
+);
 
 //Detail Screen
 const DetailStackScreen = ({ navigation }: HomeScreen) => (
