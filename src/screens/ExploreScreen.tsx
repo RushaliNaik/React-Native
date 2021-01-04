@@ -2,32 +2,29 @@ import React from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 // import { RouteName } from '../constants/enumConstants';
 
-interface HomeScreen {
+interface ExploreScreen {
   navigation: any;
 }
 
 const Separator = () => <View style={styles.separator} />;
 
-export function HomeScreen({ navigation }: HomeScreen) {
+export function ExploreScreen({ navigation }: ExploreScreen) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
+      <Text style={styles.title}>Explore Screen</Text>
       <Separator />
-      <Button
-        title="Go to the Detail screen"
-        onPress={() => navigation.navigate('Details')}
-      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 }
 
-export default HomeScreen;
+export default ExploreScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: '#eaeaea',
+    backgroundColor: '#fff',
   },
   title: {
     marginTop: 100,
@@ -35,7 +32,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: '#20232a',
     borderRadius: 6,
-    backgroundColor: '#DD5E98',
+    backgroundColor: '#12EAEA',
     color: '#20232a',
     textAlign: 'center',
     fontSize: 30,

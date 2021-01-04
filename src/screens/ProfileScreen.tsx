@@ -2,41 +2,29 @@ import React from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 // import { RouteName } from '../constants/enumConstants';
 
-interface DetailScreen {
+interface ProfileScreen {
   navigation: any;
 }
 
 const Separator = () => <View style={styles.separator} />;
 
-export function DetailScreen({ navigation }: DetailScreen) {
+export function ProfileScreen({ navigation }: ProfileScreen) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Detail Screen</Text>
-      <Separator />
-      <Button
-        title="Go to the Detail screen... Again!"
-        onPress={() => navigation.push('Details')}
-      />
+      <Text style={styles.title}>Profile Screen</Text>
       <Separator />
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      <Separator />
-      <Button title="Go back" onPress={() => navigation.goBack('Details')} />
-      <Separator />
-      <Button
-        title="Go back to first screen in stack"
-        onPress={() => navigation.popToTop()}
-      />
     </View>
   );
 }
 
-export default DetailScreen;
+export default ProfileScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: '#eaeaea',
+    backgroundColor: '#fff',
   },
   title: {
     marginTop: 100,
@@ -44,7 +32,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: '#20232a',
     borderRadius: 6,
-    backgroundColor: '#DD5E98',
+    backgroundColor: '#FFB30F',
     color: '#20232a',
     textAlign: 'center',
     fontSize: 30,
