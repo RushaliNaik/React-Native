@@ -55,7 +55,7 @@ export function MainTabScreen({}: MainTabScreen) {
           tabBarLabel: 'Home',
           tabBarColor: '#DD5E98',
           tabBarIcon: ({ color }) => (
-            <Icons name="ios-home" color={color} size={26} />
+            <Icons name="home" color={color} size={26} />
           ),
         }}
       />
@@ -66,7 +66,7 @@ export function MainTabScreen({}: MainTabScreen) {
           tabBarLabel: 'Notification',
           tabBarColor: '#91CB3E',
           tabBarIcon: ({ color }) => (
-            <Icons name="ios-notifications" color={color} size={26} />
+            <Icons name="notifications" color={color} size={26} />
           ),
         }}
       />
@@ -77,7 +77,7 @@ export function MainTabScreen({}: MainTabScreen) {
           tabBarLabel: 'Profile',
           tabBarColor: '#FFB30F',
           tabBarIcon: ({ color }) => (
-            <Icons name="ios-person" color={color} size={26} />
+            <Icons name="person" color={color} size={26} />
           ),
         }}
       />
@@ -88,7 +88,7 @@ export function MainTabScreen({}: MainTabScreen) {
           tabBarLabel: 'Explore',
           tabBarColor: '#12EAEA',
           tabBarIcon: ({ color }) => (
-            <Icons name="ios-aperature" color={color} size={26} />
+            <Icons name="eye" color={color} size={26} />
           ),
         }}
       />

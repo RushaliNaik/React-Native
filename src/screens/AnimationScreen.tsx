@@ -12,11 +12,17 @@ export function AnimationScreen() {
 
   function moveBall() {
     Animated.timing(leftValue, {
-      toValue: 100,
-      duration: 1000,
-      useNativeDriver: false,
+      toValue: 500,
+      duration: 5000,
+      useNativeDriver: true,
     }).start();
+
+    // To test useNativeDriver outcomes
+    // setTimeout(() => {
+    //   for (let i = 0; i < 5000000000; i++) {}
+    // }, 1000);
   }
+
   return (
     <View style={styles.containerWrap}>
       <View style={styles.container}>
@@ -28,7 +34,9 @@ export function AnimationScreen() {
               height: 100,
               borderRadius: 100 / 2,
               backgroundColor: '#A07178',
-              marginLeft: leftValue,
+              // Cannot run MarginLeft directly on Native OS soo use transform
+              // marginLeft: leftValue,
+              transform: [{ translateX: leftValue }],
             },
           ]}
         />
